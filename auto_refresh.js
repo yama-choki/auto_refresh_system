@@ -1,5 +1,5 @@
 //↓メソッドを設定
-const auto_refresh_30s = () => {
+let auto_refresh = () => {
   setInterval(() => {
       //↓ボタンのIDから押したいボタンを指定
       const button = document.getElementById('')
@@ -10,12 +10,12 @@ const auto_refresh_30s = () => {
     },30000
   )
 }
-//↓auto_refresh_30sメソッドを起動
+//↓auto_refreshメソッドを起動
 //2回目以降は↓だけで起動する
-auto_refresh_30s()
+auto_refresh()
 
 //↓メソッドの停止
 //リフレッシュで案件が表示後はconsoleで↓を実行後、案件をピックアップすること！！エラーが出ます！！
-clearInterval(auto_refresh_30s)
+clearInterval(auto_refresh)
 
 
